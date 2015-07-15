@@ -5,6 +5,7 @@ import thread
 import logging
 
 app = Flask(__name__)
+logging.basicConfig(filename='replicator.log',level=logging.DEBUG)
 
 @app.route('/clone', methods=['GET', 'POST'])
 def clone():
